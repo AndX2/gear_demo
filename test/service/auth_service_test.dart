@@ -44,6 +44,7 @@ void testRefreshToken() {
     'Обновление истекшего токена доступа',
     () async {
       AuthService service = AuthService(di.getIt<AuthRepository>());
+      
       final pair = await service.refreshToken(_testRefreshToken);
       assert(pair != null && pair is TokenPair,
           'Ошибка логики AuthService.refreshToken');

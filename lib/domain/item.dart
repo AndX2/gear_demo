@@ -9,7 +9,7 @@ final items = List.generate(
     description:
         'Брать только свежий',
     images: index.isOdd
-        ? ['https://foodandhealth.ru/wp-content/uploads/2017/10/baton.jpg']
+        ? ['https://ideireceptov.ru/wp-content/uploads/2019/06/1-1317.jpg']
         : [],
     count: 2,
   ),

@@ -3,7 +3,7 @@ import 'package:gear_demo/service/auth/auth_service.dart';
 import 'package:injectable/injectable.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-@injectable
+@singleton
 class ListService {
   final ListRepository _listRepository;
 
@@ -18,6 +18,7 @@ class ListService {
   );
 
   void someMethod() {}
+  
   void printConsole(String msg) {
     print('ListService.printConsole: $msg');
   }

@@ -5,7 +5,7 @@ import 'package:gear_demo/repository/dartservice_client.dart';
 import 'package:gear_demo/service/list/list_service.dart';
 import 'package:injectable/injectable.dart';
 
-@injectable
+@singleton
 class AuthService {
   final AuthRepository _authRepository;
 

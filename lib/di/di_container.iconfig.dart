@@ -47,12 +47,14 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
       () => ListRepository(g<Dio>(instanceName: 'dartservice')));
   g.registerFactory<AuthRepository>(
       () => AuthRepository(g<Dio>(instanceName: 'dartservice')));
-  g.registerFactory<AuthService>(() => AuthService(g<AuthRepository>()));
-  g.registerFactory<ListService>(() => ListService(
-        g<AuthService>(),
-        g<ListRepository>(),
-        g<SharedPreferences>(),
-      ));
+
+  //Eager singletons must be registered in the right order
+  g.registerSingleton<AuthService>(AuthService(g<AuthRepository>()));
+  g.registerSingleton<ListService>(ListService(
+    g<AuthService>(),
+    g<ListRepository>(),
+    g<SharedPreferences>(),
+  ));
 }
 
 class _$RegisterPreferences extends RegisterPreferences {}
