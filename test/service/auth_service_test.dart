@@ -33,8 +33,6 @@ main() {
     () {
       di.configureDependencies();
       unit_test.TestWidgetsFlutterBinding.ensureInitialized();
-
-      // authService = AuthService(di.getIt<AuthRepository>());
     },
   );
 

@@ -1,16 +1,21 @@
 # gear_demo
 
-A new Flutter project.
+Flutter DI demo
+GetIt + Injectable 
 
-## Getting Started
+## Links
 
-This project is a starting point for a Flutter application.
+ [GetIt](https://pub.dev/packages/get_it)
+ [Injectable](https://pub.dev/packages/injectable)
+ [Injectable_generator](https://pub.dev/packages/injectable_generator)
+ [Build_runner](https://pub.dev/packages/build_runner)
 
-A few resources to get you started if this is your first Flutter project:
+ ## Start gen
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+ cli: flutter pub run build_runner watch --delete-conflicting-outputs
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+ ## More
+
+ [ResoCoder](https://resocoder.com/2020/02/04/injectable-flutter-dart-equivalent-to-dagger-angular-dependency-injection/)
+
+
