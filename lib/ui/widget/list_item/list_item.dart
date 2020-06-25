@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart' hide Action;
 import 'package:mwwm/mwwm.dart';
 
-import 'package:gear_demo/di/di_container.dart';
+import 'package:gear_demo/ui/ext/default_wm_builder.dart';
 import 'package:gear_demo/domain/item.dart';
 import 'package:gear_demo/ui/widget/list_item/list_item_wm.dart';
 
@@ -13,14 +13,10 @@ class ListItemWidget extends CoreMwwmWidget {
   final scaffoldKey = GlobalKey<ScaffoldState>();
 
   ListItemWidget({
-    Key key,
     this.subHeader,
     @required this.item,
   }) : super(
-          widgetModelBuilder: (ctx) => getIt.get<ListItemWm>(
-            param1: GlobalKey<ScaffoldState>(),
-            param2: item,
-          ),
+          widgetModelBuilder: defaultWmBuilder<ListItemWm, Item>(value: item),
         );
 
   @override

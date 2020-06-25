@@ -21,7 +21,6 @@ class ListPageWidget extends StatelessWidget {
         scrollDirection: Axis.vertical,
         itemCount: items.length,
         itemBuilder: (_, index) => ListItemWidget(
-          key: Key('listItem_$index'),
           subHeader: index == 0 ? ListPageHeaderWidget() : null,
           item: items[index],
         ),
