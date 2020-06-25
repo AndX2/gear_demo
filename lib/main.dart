@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gear_demo/di/di_container.dart';
 import 'package:gear_demo/ui/main_screen.dart';
-import 'package:injectable/injectable.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();

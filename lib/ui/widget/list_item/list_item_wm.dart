@@ -9,8 +9,8 @@ import 'package:gear_demo/ui/ext/wm_factory.dart';
 
 @injectable
 class ListItemWm extends InjectableWM<Item> {
-  final onOddTapAction = Action<void>();
-  final onEvenTapAction = Action<void>();
+  final onOddTapAction = Action();
+  final onEvenTapAction = Action();
 
   ListItemWm(
     @factoryParam BuildContext context,
@@ -25,15 +25,16 @@ class ListItemWm extends InjectableWM<Item> {
   @override
   void onBind() {
     super.onBind();
-    subscribe<void>(onOddTapAction.stream, _onTap);
-    subscribe<void>(onEvenTapAction.stream, _onEvenTap);
+
+    subscribe(onOddTapAction.stream, (_) => _onTap());
+    subscribe(onEvenTapAction.stream, (_) => _onEvenTap());
   }
 
-  void _onTap(_) {
+  void _onTap() {
     handleError('Handle error message ${value.name}');
   }
 
-  void _onEvenTap(_) {
+  void _onEvenTap() {
     final listService = getIt.get<ListService>();
     listService.printConsole(value.name);
   }

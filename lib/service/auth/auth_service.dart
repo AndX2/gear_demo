@@ -1,8 +1,5 @@
-import 'package:dio/dio.dart';
 import 'package:gear_demo/domain/auth/token_pair.dart';
 import 'package:gear_demo/repository/auth_api/auth_repository.dart';
-import 'package:gear_demo/repository/dartservice_client.dart';
-import 'package:gear_demo/service/list/list_service.dart';
 import 'package:injectable/injectable.dart';
 
 @singleton

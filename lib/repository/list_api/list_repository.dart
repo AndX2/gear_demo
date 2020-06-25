@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:gear_demo/repository/dartservice_client.dart';
 import 'package:injectable/injectable.dart';
 
 @injectable
