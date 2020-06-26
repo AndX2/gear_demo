@@ -32,8 +32,8 @@ Future<void> $initGetIt(GetIt g, {String environment}) async {
       (scaffoldKey, _) => ConsoleMessageController.create(scaffoldKey));
   g.registerFactory<DefaultErrorHandler>(
       () => DefaultErrorHandler(g<ConsoleMessageController>()));
-  g.registerFactoryParam<ListItemWm, GlobalKey<ScaffoldState>, Item>(
-      (key, item) => ListItemWm(key, item));
+  g.registerFactoryParam<ListItemWm, BuildContext, Item>(
+      (context, value) => ListItemWm(context, value));
   final sharedPreferences = await registerPreferences.preferences;
   g.registerFactory<SharedPreferences>(() => sharedPreferences);
   g.registerFactoryParam<WidgetModelDependencies, GlobalKey<ScaffoldState>,
